@@ -7,7 +7,7 @@ word_list = set(data)
 
 def filter_words(allowed_letters, hero_letter):
     allowed_set = set(allowed_letters) 
-    return [word for word in word_list if set(word).issubset(allowed_set) and hero_letter in word]
+    return [word for word in word_list if set(word).issubset(allowed_set) and hero_letter in word and len(word) > 3]
 
 allowed_letters = input("Enter allowed letters: ").strip().lower() 
 hero_letter = input("Enter the hero letter: ").strip().lower()  
